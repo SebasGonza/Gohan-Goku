@@ -1,0 +1,21 @@
+<h1>
+    Por Pais
+</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-buscador [placeholder]="placeholder_" (enviar)="buscar($event)"></app-buscador>
+    </div>
+</div>
+
+<div *ngIf="flag" class="alert alert-danger">
+    El campo está vacio
+</div>
+
+<div class="row">
+    <div class="col">
+        <app-pais-table [paises]="paises"></app-pais-table>
+    </div>
+
+</div>
